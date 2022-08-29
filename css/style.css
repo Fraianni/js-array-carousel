@@ -1,0 +1,83 @@
+/* generics */
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* utilities */
+
+/* content */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#carousel {
+  height: 50vh;
+  position: relative;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.item.active {
+  display: inline-block;
+}
+
+/* cambiata da me direzione delle freccette */
+#carousel-navigator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  z-index: 100;
+  height: 100%;
+}
+
+#carousel-navigator button {
+  font-size: 32px;
+}
+
+#carousel-navigator button:hover {
+  background-color: yellow;
+}
+
+/* pezzi di css aggiunti da me */
+
+.carousel-thumbnail {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 25%;
+  position: absolute;
+  right: 0;
+}
+
+.carousel-thumbnail img {
+  height: calc(100% / 5);
+  opacity: 50%;
+}
+
+img.no-opacity {
+  opacity: 100%;
+  border: 1px solid white;
+}
+
+.carousel-navigator .carousel-thumbnail:hover {
+  display: none;
+}
