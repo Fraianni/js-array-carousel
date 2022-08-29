@@ -76,8 +76,14 @@ nextButton.addEventListener('click',
 
         //aggiunto da me, bonus1
         else if (activeIndex === images.length - 1) {
+
             container.innerHTML += '<img class="' + 'item active' + '" src="img/' + images[0] + '.jpg" alt="due" />'
             activeIndex = 0;
+
+            //bonus2
+            no_opacity_img.classList.remove('no-opacity');
+            document.getElementById('first').className += 'no-opacity';
+
 
         }
 
@@ -134,6 +140,11 @@ previousButton.addEventListener('click',
         else if (activeIndex === 0) {
             container.innerHTML += '<img class="' + 'item active' + '" src="img/' + images[images.length - 1] + '.jpg" alt="due" />'
             activeIndex = images.length - 1;
+
+
+            //bonus2
+            no_opacity_img.classList.remove('no-opacity');
+            document.getElementById('last').className += 'no-opacity';
 
         }
 
